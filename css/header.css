@@ -3,6 +3,11 @@
   height: 80px;
   background: #2BA5D9;
 }
+#headerMain{
+  width:1100px;
+  height: 100%;
+  margin: 0 auto;
+}
 .logo{
   display: block;
   width: 186px;
