@@ -1,5 +1,5 @@
 xiang.ui = {};
-console.log("xiang.ui", xiang.ui);
+// console.log("xiang.ui", xiang.ui);
 
 xiang.ui.cjAnamite = function(){
 	//p1
