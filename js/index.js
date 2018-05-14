@@ -4,14 +4,21 @@
 
 // js document
 window.onload = function(){
-
+  xiang.app.showloading();
 }
 
 // 命名空间
 var xiang = {};
 
+
 // 工具类
 xiang.tools = {};
+//应用类 --主要实现页面的功能
+xiang.app = {};
+// 公用组件类，特效什么的
+xiang.ui = {};
+
+
 
 xiang.tools.$ = function(obj){
   return document.getElementById(obj);
@@ -92,6 +99,6 @@ xiang.app.showloading = function(){
   function divChang(){
     oMain.removeChild(oLoading);
     oMyaudio.play();
-    he.ui.cjAnamite()[0].inAn();
+    xiang.ui.cjAnamite()[0].inAn();
   }
 }

@@ -38,3 +38,30 @@ a{
 	float: right;
 }
 /*conment end*/
+
+#loading div{
+	width: 100%;
+	height:50%;
+	background: #009CE0;
+	position: absolute;
+	z-index: 50;
+	transition: 2s;
+}
+#loading div:nth-of-type(1){
+	top: 0;
+}
+#loading div:nth-of-type(2){
+	bottom: 0;
+}
+#loading span{
+	width: 0%;
+	height: 4px;
+	display: block;
+	left: 0;
+	top: 50%;
+	margin-top: -2px;
+	z-index: 51;
+	background: #ffffff;
+	position: absolute;
+	transition: 0.5s;
+}
