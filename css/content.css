@@ -1,0 +1,157 @@
+#content{
+  width: 100%;
+  height: 903px;
+  overflow: auto;
+  position: relative;
+}
+#list{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s top;
+}
+#list .liList{
+  width: 100%;
+  overflow: hidden;
+  /* 测试 */
+  height: 903px;
+  /* 测试 */  
+}
+#list .liList:nth-child(1){
+	background: url(../img/bg1.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#list .liList:nth-child(2){
+	background: url(../img/bg3.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#list .liList:nth-child(3){
+	background: url(../img/bg4.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#list .liList:nth-child(4){
+	background: url(../img/bg5.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#list .liList:nth-child(5){
+	background: url(../img/bg2.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#list .page{
+  width: 1100px;
+  height: 520px;
+}
+
+.side_Nav{
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  right: 0;
+  top: 50%;
+  margin-top: -75px;
+}
+.side_Nav a{
+  display: block;
+  margin-bottom: 10px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.side_Nav .active{
+  background: #ffffff;
+}
+
+
+
+
+/* page1 */
+
+.homeContend{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+}
+.homeContend li{
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+}
+.homeContend .activeHome{
+  z-index: 1;
+  visibility: visible;
+}
+homeBtn{
+  width: 160px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  bottom: 0;
+  z-index: 10;
+  transition: 1s;
+}
+.homeBtn span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	background: rgba(255,255,255,0.5);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.homeBtn .homeBtnActive{
+	background: rgba(255,255,255,1);
+	
+}
+
+/*hoconten 3D装换*/
+
+@keyframes LeftHide{
+	0%{transform:translateZ(0px); visibility:visible;}
+	40%{ transform: translate(-50%) scale(0.8) rotateY(30deg); }
+	100%{ transform:translateZ(-200px);}
+}
+
+@keyframes RightShow{
+	0%{transform: translateZ(-200px);}
+	40%{ transform: translate(50%) scale(0.8) rotateY(-30deg); }
+	100%{transform: translateZ(0px)}
+}
+
+@keyframes RightHide{
+	0%{ transform: translateZ(0px); visibility: visible;}
+	40%{transform: translate(50%) scale(0.8) rotateY(-30deg);}
+	100%{transform: translateZ(-200px);}
+}
+@keyframes LeftShow{
+	0%{ transform: translateZ(-200px);}
+	40%{transform: translate(-50%) scale(0.8) rotateY(30deg);}
+	100%{transform: translateZ(0px);}
+}
+
+.homeContend .LeftHide{
+	animation: LeftHide 1s;
+	visibility: hidden;
+}
+.homeContend .RightShow{
+	animation: RightShow 1s;
+	visibility: visible;
+	z-index: 3;
+}
+
+.homeContend .RightHide{
+	animation: RightHide 1s;
+	visibility: hidden;
+}
+.homeContend .LeftShow{
+	animation: LeftShow 1s;
+	visibility: visible;
+	z-index: 3;
+}
