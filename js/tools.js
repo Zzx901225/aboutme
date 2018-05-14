@@ -1,7 +1,7 @@
 xiang.tools = {};
 // console.log("xiang.tools", xiang.tools)
 
-xiang.tools.$ = function(){
+xiang.tools.$ = function(obj){
   return document.getElementById(obj);
 }
 xiang.tools.getByClass = function(oParent, className){
